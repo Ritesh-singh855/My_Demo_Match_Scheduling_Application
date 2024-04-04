@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   item: {
     fontSize: 20,
     marginVertical: 10,
-    fontWeight:'bold'
+    fontWeight: 'bold',
   },
   bottomButtons: {
     flexDirection: 'row',
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     fontSize: 18,
-    fontWeight:'bold'
+    fontWeight: 'bold',
   },
 });
 

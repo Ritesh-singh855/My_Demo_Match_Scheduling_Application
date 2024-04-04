@@ -1,5 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, TextInput, Button, Alert, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  TextInput,
+  Button,
+  Alert,
+  TouchableOpacity,
+} from 'react-native';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import {styles} from './style';
 import {useSelector} from 'react-redux';
@@ -12,7 +19,6 @@ const SchedulingScreen = () => {
   const route = useRoute();
   const data = route.params || {};
   const [finalData, setFinalData] = useState();
-  const [finalUpdatedData, setFinalUpdatedData] = useState();
 
   const [matchDay, setMatchDay] = useState(data.matchDay);
   const [matchTime, setMatchTime] = useState(data.matchTime);
@@ -29,7 +35,7 @@ const SchedulingScreen = () => {
         navigation.navigate('Home');
         Alert.alert('Match Created', 'Successfully');
       } else {
-        dispatch(updateMatch( {data,finalData}));
+        dispatch(updateMatch({data, finalData}));
         navigation.navigate('Home');
         Alert.alert('Match Updated', 'Successfully');
       }
@@ -82,7 +88,7 @@ const SchedulingScreen = () => {
     <View style={styles.container}>
       <TouchableOpacity style={styles.matchDaylabel} onPress={showDatePicker}>
         <Text style={styles.matchDaylabelText}>Select Match Day</Text>
-        </TouchableOpacity>
+      </TouchableOpacity>
       <Text style={styles.matchDayInput}>
         {matchDay
           ? 'Match day - ' + matchDay
@@ -104,9 +110,9 @@ const SchedulingScreen = () => {
         SendFinalTime={handleConfirmTime}
         updatedData={data.matchTime}
       />
-        <TouchableOpacity style={styles.saveButtonStyle} onPress={handleSave}>
+      <TouchableOpacity style={styles.saveButtonStyle} onPress={handleSave}>
         <Text style={styles.matchDaylabelText}>Create Match</Text>
-        </TouchableOpacity>
+      </TouchableOpacity>
     </View>
   );
 };

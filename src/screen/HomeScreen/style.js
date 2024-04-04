@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const style = StyleSheet.create({
   container: {
@@ -7,17 +7,17 @@ const style = StyleSheet.create({
   },
   titleContainer: {
     justifyContent: 'center',
-    alignItems:'center',
-    padding:10,
-    backgroundColor:'lime',
-    borderRadius:10,
-    borderWidth:2,
-    borderColor:'black',
+    alignItems: 'center',
+    padding: 10,
+    backgroundColor: 'lime',
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: 'black',
   },
-  titleText:{
+  titleText: {
     fontSize: 20,
-    fontWeight:'bold',
-    color:'#000'
+    fontWeight: 'bold',
+    color: '#000',
   },
   item: {
     backgroundColor: '#f9c2ff',
@@ -27,16 +27,16 @@ const style = StyleSheet.create({
     borderRadius: 10,
     elevation: 3,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.2,
     shadowRadius: 2,
-    borderWidth:2,
-    borderColor:'black'
+    borderWidth: 2,
+    borderColor: 'black',
   },
-  matchText:{
+  matchText: {
     fontSize: 15,
-    fontWeight:'bold',
-    color:'#000'
+    fontWeight: 'bold',
+    color: '#000',
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -50,20 +50,19 @@ const style = StyleSheet.create({
     borderRadius: 10,
     elevation: 3,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.2,
     shadowRadius: 2,
-    width:'50%',
-    alignItems:'center',
-    borderWidth:2,
-    borderColor:'black'
+    width: '50%',
+    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: 'black',
   },
-  text:{
-    color:'white',
+  text: {
+    color: 'white',
     fontSize: 18,
-    fontWeight:'bold'
-
-  }
+    fontWeight: 'bold',
+  },
 });
 
 export default style;

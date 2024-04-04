@@ -1,6 +1,5 @@
-// store.js
 import { createStore } from 'redux';
-import rootReducer from './reducers'; // You need to define your reducers
+import rootReducer from './reducers'; 
 
 const store = createStore(rootReducer);
 

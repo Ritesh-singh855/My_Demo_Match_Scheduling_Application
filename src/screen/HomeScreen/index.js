@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { ScrollView, View, Text, FlatList, TouchableOpacity } from 'react-native';
-import { useNavigation, useIsFocused } from '@react-navigation/native';
-import { useSelector } from 'react-redux';
+import React, {useEffect, useState} from 'react';
+import {ScrollView, View, Text, FlatList, TouchableOpacity} from 'react-native';
+import {useNavigation, useIsFocused} from '@react-navigation/native';
+import {useSelector} from 'react-redux';
 import styles from './style';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
-  const isFocused = useIsFocused(); 
+  const isFocused = useIsFocused();
   const [matches, setMatches] = useState([]);
   const matchesData = useSelector(state => state.reducer);
 
@@ -16,14 +16,17 @@ const HomeScreen = () => {
     }
   }, [isFocused, matchesData]);
 
-  const renderItem = ({ item }) => (
+  const renderItem = ({item}) => (
     <ScrollView>
       <TouchableOpacity
         onPress={() => {
           navigation.navigate('Match', item);
         }}>
         <View style={styles.item}>
-          <Text style={styles.matchText}>{`${item.matchDay}, ${item.matchTime}`}</Text>
+          <Text
+            style={
+              styles.matchText
+            }>{`${item.matchDay}, ${item.matchTime}`}</Text>
         </View>
       </TouchableOpacity>
     </ScrollView>
@@ -32,7 +35,7 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
-      <Text style={styles.titleText}>MATCH LIST</Text>
+        <Text style={styles.titleText}>MATCH LIST</Text>
       </View>
 
       <FlatList
