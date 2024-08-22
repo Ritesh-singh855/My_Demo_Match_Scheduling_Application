@@ -23,7 +23,7 @@ const MatchScreen = () => {
         onPress: () => {
           dispatch(
             removeMatch({matchDay: data.matchDay, matchTime: data.matchTime}),
-          ); // <-- Corrected dispatch call
+          ); 
           navigation.navigate('Home');
         },
       },
