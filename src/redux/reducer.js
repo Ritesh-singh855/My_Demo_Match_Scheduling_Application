@@ -14,7 +14,6 @@ export const reducer = (state = initialState, action) => {
         );
       });
     case UPDATE_MATCH:
-      console.warn('reducer data hai', action.data);
       const filteredState = state.filter(item => {
         return (
           item.matchDay !== action.data.data.matchDay ||
