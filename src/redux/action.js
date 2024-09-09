@@ -15,7 +15,6 @@ export function removeMatch(item) {
 }
 
 export function updateMatch(item) {
-  console.warn('actionnnnn', item);
   return {
     type: UPDATE_MATCH,
     data: item,
